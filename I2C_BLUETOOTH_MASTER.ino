@@ -35,6 +35,7 @@ char key;//chave que verificará se o Slave deseja enviar ou não alguma informa
         char c = Wire.read(); // receive a byte as character
         bluetooth.println(c);
       }
+      Wire.write(!Key);//changing value key;
       Wire.endTransmission(i2c_adress);//encerra transmissão de dados
       delay(500);
     }
